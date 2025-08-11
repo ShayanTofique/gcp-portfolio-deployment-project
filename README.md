@@ -56,6 +56,9 @@ docker compose up
 Access the application at:  
 [http://localhost:3000](http://localhost:3000)
 
+
+[application with docker compose .webm](https://github.com/user-attachments/assets/a779ae7e-e16a-4db0-8264-5ac172cc1a32)
+
 ### Without Docker
 Start the application directly:
 ```bash
@@ -116,3 +119,4 @@ Run tests locally:
 ```bash
 npm test
 ```
+
