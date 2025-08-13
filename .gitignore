@@ -118,3 +118,19 @@ htmlcov/
 .pytest_cache/
 coverage.xml
 
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform crash logs
+crash.log
+
+# Ignore Terraform variables files (if they contain secrets)
+*.tfvars
+
+# Ignore Terraform plan outputs
+*.tfplan
+
+# Ignore .terraform directory (contains provider plugins)
+.terraform/
+
