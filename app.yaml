@@ -1,0 +1,10 @@
+runtime: nodejs20
+
+handlers:
+  
+  - url: /static
+    static_dir: frontend/static
+
+env_variables:
+  PORT: 8080
+  MONGODB_URI: "mongodb+srv://<username>:<password>@cluster0.joqu9jg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
