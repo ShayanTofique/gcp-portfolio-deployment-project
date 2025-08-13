@@ -57,7 +57,8 @@ Access the application at:
 [http://localhost:3000](http://localhost:3000)
 
 
-(https://github.com/user-attachments/assets/a779ae7e-e16a-4db0-8264-5ac172cc1a32)
+[docker_compose.webm](https://github.com/user-attachments/assets/48a11cc7-d907-401e-b9e0-17c391157e6b)
+
 
 ### Without Docker
 Start the application directly:
@@ -86,7 +87,7 @@ npm start
     gcloud app deploy
     ```
 
-(https://github.com/user-attachments/assets/a5173095-6eb8-44d1-a423-d822930a9a9c)
+[app_engine_deployment.webm](https://github.com/user-attachments/assets/5c1a7707-f494-450c-b39b-11ac1308ae0e)
 
 
 ## 🔄 CI/CD Pipeline
@@ -122,5 +123,6 @@ Run tests locally:
 ```bash
 npm test
 ```
+
 
 
