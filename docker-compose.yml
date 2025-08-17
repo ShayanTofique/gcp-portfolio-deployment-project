@@ -6,20 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "${PORT}:${PORT}"
     environment:
-      - PORT=3000
-      - MONGO_URI=mongodb://mongodb:27017/mydatabase
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:6
-    container_name: mongodb
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-
-volumes:
-  mongo-data:
+      - PORT=${PORT}
+      - MONGO_URI=${MONGODB_URI}
