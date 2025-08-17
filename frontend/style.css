@@ -146,17 +146,65 @@ body {
   color: #f5f5f5;
 }
 
-/* Education Cards */
-#education .card {
-  background: #242a36;
-  border: none;
-  color: #d3d8e2;
-  transition: transform 0.3s ease;
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  position: relative;
 }
 
-#education .card:hover {
-  transform: translateY(-5px);
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #00c3ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
+
+/* Education Cards */
+.edu-card {
+  background: #1c2331;
+  border: none;
+  color: #e0e5f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 195, 255, 0.25);
+}
+
+/* University Logo */
+.edu-logo {
+  width: 80px;
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+  padding: 5px;
+}
+
+/* Dates */
+.edu-date {
+  font-size: 0.9rem;
+  color: #9aa5b1;
+}
+
+/* University Name */
+.edu-university {
+  font-size: 1.05rem;
+  color: #00c3ff;
+  font-weight: 500;
+}
+
+/* Focus Areas */
+.edu-focus {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cfd6e4;
+}
+
 
 /* Project Cards */
 #projects .card {
