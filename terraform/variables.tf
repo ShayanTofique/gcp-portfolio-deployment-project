@@ -56,7 +56,6 @@ variable "mongodb_uri" {
   description = "The MongoDB connection URI"
   type        = string
   sensitive   = true
-  default     = "mongodb+srv://shaikhshayan137:<pass>@cluster0.joqu9jg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 }
 
 variable "repository_id" {
