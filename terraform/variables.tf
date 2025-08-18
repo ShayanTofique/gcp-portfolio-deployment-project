@@ -57,3 +57,9 @@ variable "mongodb_uri" {
   type        = string
   default     = "mongodb+srv://shaikhshayan137:<pass>@cluster0.joqu9jg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 }
+
+variable "repository_id" {
+  description = "Artifact Registry for my gcp app images"
+  type        = string
+  default     = "my-gcp-app-repo"
+}
