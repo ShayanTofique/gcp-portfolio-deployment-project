@@ -22,11 +22,11 @@ spec:
         env:
         - name: PORT
           value: "3000"
-        - name: MONGO_URI 
+        - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGO_URI
+              key: MONGODB_URI
         resources:
           limits:
             cpu: 500m
