@@ -63,6 +63,10 @@ docker-compose.override.yml
 !app.yaml
 !Dockerfile
 !docker-compose.yml
+!deployment.yaml
+!hpa.yaml
+!service.yaml
+!configmap-secret.yaml
 
 # -----------------
 # OS & IDE Files
