@@ -16,6 +16,13 @@ variable "zone" {
   default     = "us-central1-c"
 }
 
+variable "my_ip" {
+  description = "Your local IP address for SSH access"
+  type = string 
+  default = "202.47.35.45"
+}
+
+
 variable "machine_type" {
   description = "The machine type for the VM"
   type        = string
@@ -56,6 +63,12 @@ variable "mongodb_uri" {
   description = "The MongoDB connection URI"
   type        = string
   sensitive   = true
+}
+
+variable "cluster_name" {
+  description = "GKE Cluster Name"
+  type        = string
+  default     = "portfolio-gke-cluster"
 }
 
 variable "repository_id" {
