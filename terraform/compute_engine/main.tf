@@ -34,7 +34,7 @@ resource "google_compute_instance" "vm_instance" {
   metadata = {
   APP_BRANCH   = var.app_branch
   APP_REPO_URL = var.app_repo_url
-  MONGODB_URI  = var.mongodb_uri
+  # MONGODB_URI  = var.mongodb_uri
   PORT         = var.expose_port
 }
 

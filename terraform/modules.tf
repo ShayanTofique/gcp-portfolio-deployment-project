@@ -14,3 +14,22 @@ module "gke" {
   vpc_id            = module.networking.vpc_id
   private_subnet_id = module.networking.private_subnet_id
 }
+
+module "artifact_registry" {
+  source            = "./artifact_registry"
+}
+
+module "appengine" {
+  source = "./app_engine"
+}
+
+module "compute_engine" {
+  source = "./compute_engine"
+}
+
+module "secrets" {
+  source = "./secrets"
+  
+}
+
+
