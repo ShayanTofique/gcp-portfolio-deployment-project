@@ -66,6 +66,7 @@ docker-compose.override.yml
 !deployment.yaml
 !hpa.yaml
 !service.yaml
+!main.yml
 
 # -----------------
 # OS & IDE Files
