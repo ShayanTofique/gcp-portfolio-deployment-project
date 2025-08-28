@@ -723,7 +723,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+ <!-- Hero Section -->
   <section id="hero">
     <!-- Floating elements -->
     <div class="floating-element"></div>
@@ -734,61 +734,18 @@
       <div class="row align-items-center min-vh-100">
         <div class="col-lg-7 hero-content">
           <div class="hero-subtitle">👋 Hello, I'm</div>
-          <h1 class="hero-title">Shayan Tofique - DevOps Engineer 🚀</h1>
+          <h1 class="hero-title">Shayan Tofique</h1>
           <div class="hero-description">
             A passionate <strong>DevOps Engineer</strong> specializing in cloud-native solutions,
             container orchestration, and CI/CD automation. I transform ideas into scalable,
             reliable infrastructure using cutting-edge technologies.
           </div>
 
-          <!-- CI/CD Showcase Badge -->
-          <div class="deployment-showcase" style="background: linear-gradient(135deg, #28a745, #20c997); 
-             color: white; padding: 15px 25px; border-radius: 15px; margin: 25px 0; 
-             box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-             animation: deploymentPulse 3s ease-in-out infinite;">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-              <div>
-                <div style="font-weight: bold; font-size: 16px; margin-bottom: 5px;">
-                  <i class="fas fa-rocket" style="margin-right: 8px;"></i>
-                  Live CI/CD Pipeline Demo
-                </div>
-                <div style="font-size: 13px; opacity: 0.9;">
-                  ✅ Auto-deployed: <span id="deploy-time"></span>
-                </div>
-              </div>
-              <div style="text-align: right; margin-left: 15px;">
-                <div style="font-size: 11px; opacity: 0.8;">Powered by:</div>
-                <div style="font-size: 12px; font-weight: 500;">GitHub Actions + GKE</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tech Stack Highlight -->
-          <div class="tech-stack-preview" style="background: rgba(255, 255, 255, 0.1); 
-             backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); 
-             padding: 15px; border-radius: 10px; margin: 20px 0;">
-            <div style="font-size: 14px; font-weight: 600; margin-bottom: 10px; color: #e74c3c;">
-              🔧 Live Infrastructure Stack:
-            </div>
-            <div class="tech-badges" style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="tech-badge" style="background: #007bff; color: white; padding: 4px 8px; 
-                  border-radius: 12px; font-size: 11px; font-weight: 500;">Docker</span>
-              <span class="tech-badge" style="background: #326ce5; color: white; padding: 4px 8px; 
-                  border-radius: 12px; font-size: 11px; font-weight: 500;">Kubernetes</span>
-              <span class="tech-badge" style="background: #4285f4; color: white; padding: 4px 8px; 
-                  border-radius: 12px; font-size: 11px; font-weight: 500;">Google Cloud</span>
-              <span class="tech-badge" style="background: #24292e; color: white; padding: 4px 8px; 
-                  border-radius: 12px; font-size: 11px; font-weight: 500;">GitHub Actions</span>
-              <span class="tech-badge" style="background: #623ce4; color: white; padding: 4px 8px; 
-                  border-radius: 12px; font-size: 11px; font-weight: 500;">Terraform</span>
-            </div>
-          </div>
-
           <div class="social-links">
             <a href="https://github.com/ShayanTofique" target="_blank" title="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/shayan-tofique-374457294" target="_blank" title="LinkedIn">
+            <a href="www.linkedin.com/in/shayan-tofique-374457294" target="_blank" title="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
             <a href="mailto:shayantofique137@gmail.com" title="Email">
@@ -814,54 +771,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Add this CSS in your style section or CSS file -->
-    <style>
-      @keyframes deploymentPulse {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-
-        50% {
-          transform: scale(1.02);
-          box-shadow: 0 12px 35px rgba(40, 167, 69, 0.4);
-        }
-
-        100% {
-          transform: scale(1);
-          box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-      }
-
-      .tech-badge {
-        transition: transform 0.2s ease;
-      }
-
-      .tech-badge:hover {
-        transform: scale(1.1);
-      }
-
-      @media (max-width: 768px) {
-        .deployment-showcase {
-          padding: 12px 15px !important;
-        }
-
-        .deployment-showcase div {
-          text-align: center !important;
-          margin-left: 0 !important;
-        }
-
-        .tech-badges {
-          justify-content: center;
-        }
-      }
-    </style>
-
-    <script>
-      // Update deployment time
-      document.getElementById('deploy-time').textContent = new Date().toLocaleString();
-    </script>
   </section>
 
   <!-- Skills Section -->
