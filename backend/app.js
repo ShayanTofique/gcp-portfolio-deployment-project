@@ -27,6 +27,93 @@ const httpRequestTotal = new client.Counter({
   labelNames: ['method', 'route', 'status_code']
 });
 
+// Add to your app.js (after existing metrics)
+
+// Real-time visitor tracking
+const currentVisitors = new client.Gauge({
+  name: 'current_active_visitors',
+  help: 'Current active visitors on the site'
+});
+
+const visitorSessions = new client.Counter({
+  name: 'visitor_sessions_total',
+  help: 'Total visitor sessions',
+  labelNames: ['page', 'user_agent_type']
+});
+
+// Store active sessions in memory (in production, use Redis)
+const activeSessions = new Map();
+const SESSION_TIMEOUT = 5 * 60 * 1000; // 5 minutes
+
+// Helper function to detect device type
+function getDeviceType(userAgent) {
+  if (/mobile/i.test(userAgent)) return 'mobile';
+  if (/tablet/i.test(userAgent)) return 'tablet';
+  return 'desktop';
+}
+
+// Helper function to generate session ID
+function generateSessionId(req) {
+  return req.ip + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+}
+
+// Visitor tracking middleware (add after your existing middleware)
+app.use((req, res, next) => {
+  const sessionId = req.headers['x-session-id'] || generateSessionId(req);
+  const now = Date.now();
+  const page = req.path;
+  const deviceType = getDeviceType(req.headers['user-agent'] || '');
+  
+  // Track this session
+  activeSessions.set(sessionId, {
+    lastSeen: now,
+    page: page,
+    deviceType: deviceType,
+    ip: req.ip
+  });
+  
+  // Clean up old sessions (older than 5 minutes)
+  for (const [id, session] of activeSessions.entries()) {
+    if (now - session.lastSeen > SESSION_TIMEOUT) {
+      activeSessions.delete(id);
+    }
+  }
+  
+  // Update metrics
+  currentVisitors.set(activeSessions.size);
+  
+  // Track new session if it's a page visit (not API call)
+  if (!page.startsWith('/api') && !path.includes('metrics')) {
+    visitorSessions.labels(page, deviceType).inc();
+  }
+  
+  // Add session ID to response header for frontend tracking
+  res.setHeader('X-Session-ID', sessionId);
+  
+  next();
+});
+
+// New API endpoint to get current visitor count
+app.get('/api/stats/visitors', (req, res) => {
+  const stats = {
+    currentVisitors: activeSessions.size,
+    sessions: Array.from(activeSessions.values()).map(session => ({
+      page: session.page,
+      deviceType: session.deviceType,
+      timeActive: Math.floor((Date.now() - session.lastSeen) / 1000)
+    }))
+  };
+  res.json(stats);
+});
+
+// Real-time visitor count endpoint for frontend
+app.get('/api/stats/live-count', (req, res) => {
+  res.json({ 
+    count: activeSessions.size,
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Middleware to collect metrics
 app.use((req, res, next) => {
   const start = Date.now();
