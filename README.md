@@ -1,369 +1,281 @@
 # 🚀 Portfolio Website - Full-Stack Cloud Application
 
-[![Deploy Status](https://img.shields.io/badge/Deploy-Success-brightgreen)](https://github.com/yourusername/portfolio)
+[![Deploy Status](https://img.shields.io/badge/Deploy-Success-brightgreen)](https://github.com/ShayanTofique/gcp-portfolio-deployment-project)
 [![Cloud Platform](https://img.shields.io/badge/Cloud-Google%20Cloud-blue)](https://cloud.google.com)
 [![Container](https://img.shields.io/badge/Container-Docker-blue)](https://www.docker.com/)
 [![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%26%20Grafana-orange)](https://grafana.com/)
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-green)](https://github.com/features/actions)
 
-A modern, cloud-native portfolio website showcasing full-stack development, DevOps practices, and cloud engineering skills. Built with scalability, observability, and best practices in mind.
+A modern, cloud-native portfolio website demonstrating multiple deployment strategies on Google Cloud Platform. This project showcases full-stack development, containerization, orchestration, monitoring, and DevOps practices across different cloud deployment models.
 
 ## 🎯 Project Overview
 
-This portfolio project demonstrates proficiency in modern web development, containerization, cloud deployment, and DevOps practices. It features a complete CI/CD pipeline, comprehensive monitoring, and multi-environment deployment strategies.
+This portfolio project demonstrates proficiency in modern cloud deployment strategies, from local development to production-grade Kubernetes clusters. It features comprehensive monitoring, CI/CD automation, and scalability testing across multiple GCP services.
 
-<!-- **Live Demo:** [https://your-portfolio-url.com](https://your-portfolio-url.com) -->
+🎬 **[portfolio website]**
+
 
 ## 🛠️ Technology Stack
 
 ### **Frontend**
-- **HTML5** - Semantic markup and modern web standards
-- **CSS3** - Custom styling with modern layout techniques
-- **Bootstrap 5** - Responsive design framework
-- **JavaScript** - Interactive user interface components
+- **HTML5 & CSS3** - Modern responsive design
+- **Bootstrap 5** - Mobile-first responsive framework
+- **JavaScript** - Interactive components
 
 ### **Backend**
-- **Node.js** - JavaScript runtime for server-side development
-- **Express.js** - Web framework for routing and middleware
-- **RESTful APIs** - Clean API design for data management
-- **Environment Configuration** - Secure configuration management
+- **Node.js & Express.js** - Server-side application
+- **RESTful APIs** - Clean API architecture
+- **Prometheus Metrics** - Custom application monitoring
 
-### **Containerization & Orchestration**
+### **Containerization & Cloud**
 - **Docker** - Application containerization
-- **Multi-stage builds** - Optimized container images
-- **Kubernetes (GKE)** - Container orchestration and scaling
-- **Pod autoscaling** - Dynamic resource management
+- **Google Cloud Platform** - Multi-service deployment
+- **Kubernetes (GKE)** - Container orchestration
+- **Terraform** - Infrastructure as Code
 
-### **Cloud Infrastructure (Google Cloud Platform)**
-- **Compute Engine** - Virtual machine instances
-- **App Engine** - Serverless application hosting
-- **Google Kubernetes Engine (GKE)** - Managed Kubernetes clusters
-  - **Node Types:** e2-medium, e2-small for cost optimization
-- **Cloud Load Balancing** - Traffic distribution and high availability
-- **Cloud Storage** - Static asset management
+### **Monitoring & Observability**
+- **Prometheus** - Metrics collection
+- **Grafana** - Real-time dashboards
+- **Custom Metrics** - HTTP requests, response times, errors
+- **Horizontal Pod Autoscaler** - Load-based scaling
 
-### **DevOps & CI/CD**
-- **GitHub Actions** - Automated build, test, and deployment pipelines
-- **Docker Registry** - Container image management
-- **Automated testing** - Quality assurance integration
-- **Security scanning** - Vulnerability detection
+### **DevOps**
+- **GitHub Actions** - Automated CI/CD pipeline
+- **Multi-environment deployment** - Seamless deployments
+- **Load testing** - Performance validation
 
-### **Infrastructure as Code**
-- **Terraform** - Infrastructure provisioning and management
-- **Environment parity** - Consistent deployments across environments
-
-### **Observability & Monitoring**
-- **Prometheus** - Metrics collection and monitoring
-- **Grafana** - Data visualization and dashboards
-- **Custom metrics** - Application performance monitoring
-- **Alerting** - Proactive incident detection
-- **Health checks** - Service reliability monitoring
-
-### **Version Control & Collaboration**
-- **Git** - Distributed version control
-- **GitHub** - Code repository and collaboration platform
-- **Branch protection** - Code quality enforcement
-
-## 🏗️ Architecture
+## 🏗️ Architecture Overview
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Users/Clients │───▶│  Cloud Load      │───▶│   GKE Cluster   │
-│                 │    │  Balancer        │    │                 │
+│   Users/Clients │───▶│  Cloud Load      │───▶│   Application   │
+│                 │    │  Balancer        │    │    Services     │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
-                                                │                 │
-┌─────────────────┐    ┌──────────────────┐    │  ┌───────────┐  │
-│   GitHub Repo   │───▶│  GitHub Actions  │───▶│  │    App    │  │
-│                 │    │     CI/CD        │    │  │   Pods    │  │
-└─────────────────┘    └──────────────────┘    │  └───────────┘  │
-                                                │                 │
-┌─────────────────┐    ┌──────────────────┐    │  ┌───────────┐  │
-│   Terraform     │───▶│   GCP Resources  │    │  │Prometheus │  │
-│   (IaC)         │    │                  │    │  │ Grafana   │  │
-└─────────────────┘    └──────────────────┘    │  └───────────┘  │
-                                                └─────────────────┘
+
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   GitHub Repo   │───▶│  GitHub Actions  │───▶│  GCP Deployment │
+│                 │    │     CI/CD        │    │   (Multi-mode)  │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Prometheus    │───▶│     Grafana      │───▶│  Real-time      │
+│   (Metrics)     │    │   (Dashboard)    │    │  Monitoring     │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
 ```
 
-## 🚀 Key Features
+## 🚀 Deployment Demonstrations
 
-### **Application Features**
-- 📱 **Responsive Design** - Mobile-first approach with Bootstrap
-- ⚡ **Fast Loading** - Optimized assets and efficient caching
-- 🔒 **Security** - HTTPS, security headers, and input validation
-- 📊 **Analytics Ready** - Integrated tracking and metrics
-- 🎨 **Modern UI/UX** - Clean, professional design
+### **1. Local Development with Docker Compose**
 
-### **DevOps Features**
-- 🔄 **Automated CI/CD** - Zero-downtime deployments
-- 📈 **Horizontal Scaling** - Kubernetes-based auto-scaling
-- 🔍 **Comprehensive Monitoring** - Real-time metrics and alerts
-- 🛡️ **Security Scanning** - Automated vulnerability detection
-- 📋 **Infrastructure as Code** - Version-controlled infrastructure
+🎬 **[Docker Compose Local Setup Demo](https://www.youtube.com/watch?v=YOUR_DOCKER_COMPOSE_VIDEO_ID)**
 
-### **Cloud-Native Features**
-- ☁️ **Multi-cloud Ready** - Portable containerized architecture
-- 📊 **Observability** - Distributed tracing and logging
-- 🔧 **Configuration Management** - Environment-specific configs
-- 💾 **Data Persistence** - Stateful and stateless components
-
-## 📊 Monitoring & Observability
-
-### **Custom Metrics**
-- HTTP request rates and response times
-- Application uptime and health status
-- Resource utilization (CPU, memory, disk)
-- Error rates and status code distribution
-- Active connections and throughput
-
-### 🎬 **Monitoring Dashboard Demo**
-[![Prometheus Grafana Visualization](https://img.youtube.com/vi/YOUR_MONITORING_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_MONITORING_VIDEO_ID)
-> **Duration:** 4-5 minutes  
-> **Content:**  Real-time metrics visualization.
-
-### **Dashboards**
-- **Application Performance** - Response times, throughput, errors
-- **Infrastructure Metrics** - Node health, resource usage
-- **Business Metrics** - User interactions, page views
-- **Alerts Configuration** - Proactive monitoring and notifications
-
-### **Health Endpoints**
-- `/health` - Application health check
-- `/metrics` - Prometheus metrics endpoint
-- `/ready` - Kubernetes readiness probe
-
-## 🚀 Local Development
-
-### **Prerequisites**
-- Node.js 18+
-- Docker & Docker Compose
-- kubectl (for Kubernetes)
-- Terraform (optional)
-
-### **Setup**
+**Setup:**
 ```bash
-# Clone the repository
+# Clone and setup
 git clone https://github.com/ShayanTofique/gcp-portfolio-deployment-project.git
-cd portfolio
+cd gcp_portfolio
 
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-
-# Run locally
-node backend/app.js
-# Access at http://localhost:3000
-
-# Run with Docker
+# Run with Docker Compose
 docker-compose up --build
 # Access at http://localhost:3000
 ```
 
-### 🎬 **Docker Compose Local Development Demo**
-[![Docker Compose](https://img.youtube.com/vi/YOUR_DOCKER_COMPOSE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_DOCKER_COMPOSE_VIDEO_ID)
-> **Duration:** 2-3 minutes  
-> **Content:** Complete local setup 
+### **2. Google App Engine Deployment**
 
-### **Development Workflow**
+🎬 **[Serverless App Engine Demo](https://www.youtube.com/watch?v=YOUR_APP_ENGINE_VIDEO_ID)**
+
+**Commands:**
 ```bash
-# Create feature branch
-git checkout -b feature/new-feature
-
-# Make changes and test
-npm test
-npm run lint
-
-# Build and test container
-docker build -t portfolio:dev .
-docker run -p 3000:3000 portfolio:dev
-
-# Commit and push
-git add .
-git commit -m "feat: add new feature"
-git push origin feature/new-feature
-
-# Create pull request
+# Deploy to App Engine
+gcloud app deploy app.yaml
+gcloud app browse
 ```
 
-## 🚢 Deployment
+### **3. Compute Engine Deployment**
 
-### **Environments**
-- **Development** - Local development environment
-- **Production** - GKE cluster for live application (`main` branch)
+🎬 **[VM-Based Compute Engine Demo](https://www.youtube.com/watch?v=YOUR_COMPUTE_ENGINE_VIDEO_ID)**
 
-### 🎬 **Multi-Platform Deployment Demos**
-
-#### **1. Google App Engine Deployment**
-[![App Engine Deployment](https://img.youtube.com/vi/YOUR_APP_ENGINE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_APP_ENGINE_VIDEO_ID)
-> **Duration:** 3-4 minutes  
-> **Content:** Serverless deployment to App Engine
-
-**Demo Highlights:**
-- `app.yaml` configuration explanation
-- `gcloud app deploy` process
-- Automatic scaling demonstration
-- Custom domain setup
-- Log monitoring in Cloud Console
-
-#### **2. Compute Engine Deployment**
-[![Compute Engine Deployment](https://img.youtube.com/vi/YOUR_COMPUTE_ENGINE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_COMPUTE_ENGINE_VIDEO_ID)
-> **Duration:** 4-5 minutes  
-> **Content:** VM-based deployment, startup scripts, load balancer configuration, and manual scaling process.
-
-**Demo Highlights:**
-- VM instance creation and configuration
-- Docker installation and setup
-- Application deployment via startup script
-- Load balancer configuration
-- Health check setup
-- Manual scaling demonstration
-
-#### **3. Google Kubernetes Engine (GKE) Deployment**
-[![GKE Deployment](https://img.youtube.com/vi/YOUR_GKE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_GKE_VIDEO_ID)
-> **Duration:** 5-6 minutes  
-> **Content:** Complete Kubernetes deployment and cluster management.
-
-**Demo Highlights:**
-- GKE cluster creation (e2-medium, e2-small nodes)
-- Kubernetes manifests walkthrough
-- Pod deployment and service exposure
-- Ingress controller setup
-- ConfigMap and Secret management
-- Rolling updates demonstration
-
-### 🎬 **Horizontal Pod Autoscaler (HPA) & Load Testing**
-[![HPA Load Testing Demo](https://img.youtube.com/vi/YOUR_HPA_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_HPA_VIDEO_ID)
-> **Duration:** 4-5 minutes  
-> **Content:** HPA configuration, load testing setup, real-time scaling observation, and performance metrics analysis.
-
-**Commands Demonstrated:**
+**Key Features:**
 ```bash
-# HPA Setup
-kubectl autoscale deployment portfolio-deployment --cpu-percent=50 --min=1 --max=10
+# Create VM with startup script
+gcloud compute instances create portfolio-vm \
+    --image-family=ubuntu-2004-lts \
+    --image-project=ubuntu-os-cloud \
+    --machine-type=e2-medium \
+    --startup-script-url=gs://your-bucket/startup.sh
+```
 
-# Load Testing
-kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh
-# while true; do wget -q -O- http://portfolio-service; done
+**Demo Highlights:**
+- VM provisioning with terraform and Docker setup
+- SSH to VM 
+- Application deployment via startup scripts
 
-# Monitoring Scaling
+---
+
+### **4. Google Kubernetes Engine (GKE) Deployment**
+
+🎬 **[Complete GKE Deployment Demo](https://www.youtube.com/watch?v=YOUR_GKE_VIDEO_ID)**
+
+**Cluster Setup:**
+```bash
+# Create GKE cluster
+gcloud container clusters create portfolio-cluster \
+    --num-nodes=3 \
+    --machine-type=e2-medium \
+    --zone=us-central1-a
+
+# Deploy application
+kubectl apply -f k8s/deployment.yaml
+kubectl get pods -l app=portfolio
+```
+
+### **5. Kubernetes HPA & Load Testing**
+
+🎬 **[HPA Auto-scaling Under Load Demo](https://www.youtube.com/watch?v=YOUR_HPA_VIDEO_ID)**
+> **Duration:** 5 minutes | **Real-time scaling based on CPU/memory usage**
+
+**Load Testing Setup:**
+```bash
+
+# Generate load
+python load_test.py
+
+# Watch scaling in real-time
 kubectl get hpa portfolio-deployment --watch
 kubectl get pods -l app=portfolio --watch
 ```
 
-### **Deployment Pipeline**
-1. **Code Push** - Developer pushes to GitHub
-2. **CI Pipeline** - Automated testing and security scanning
-3. **Container Build** - Docker image creation and registry push
-4. **Infrastructure Update** - Terraform applies infrastructure changes
-5. **Application Deploy** - Kubernetes deployment with rolling updates
-6. **Health Verification** - Automated health checks and monitoring
-7. **Notification** - Deployment status updates 
+**Demo Highlights:**
+- HPA configuration and thresholds
+- Load generation with multiple concurrent requests
+- Real-time pod scaling (1→5→10 pods)
 
-### 🎬 **Complete CI/CD Pipeline Demo**
-[![Full CI/CD Demo](https://img.youtube.com/vi/YOUR_CICD_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_CICD_VIDEO_ID)
-> **Duration:** 6-8 minutes  
-> **Content:** End-to-end CI/CD demonstration from code commit to production deployment, including automated testing, security scanning and deployment to GKE Cluster.
+---
 
-**Pipeline Stages Demonstrated:**
+### **6. Complete CI/CD Pipeline**
 
-#### **1. Continuous Integration (CI)**
-- Code push trigger demonstration
-- Automated testing execution
-- Code quality checks (ESLint, security scanning)
-- Docker image build and push to registry
-- Multi-stage pipeline execution in GitHub Actions
+🎬 **[End-to-End CI/CD Pipeline Demo](https://www.youtube.com/watch?v=YOUR_CICD_VIDEO_ID)**
+> **Duration:** 7 minutes | **Automated deployment from code commit to production**
 
-#### **2. Continuous Deployment (CD)**
-- Kubernetes manifests deployment
-- Rolling update strategy
-- Health check validation
-- Rollback demonstration (if deployment fails)
-
-#### **3. Pipeline Monitoring**
-- GitHub Actions workflow visualization
-- Real-time build logs
-- Deployment status notifications
-- Integration with email notifications
-
-**GitHub Actions Workflow Highlights:**
+**Pipeline Stages:**
 ```yaml
-# Shown in video: .github/workflows/deploy.yml
+# GitHub Actions Workflow
 name: Deploy to GKE
 on:
   push:
     branches: [main]
 jobs:
-  test-build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-      - name: Run tests
+      - name: Run tests  
       - name: Build Docker image
+      - name: Push to GCR
       - name: Deploy to GKE
       - name: Verify deployment
 ```
 
-### **Manual Deployment**
-```bash
-# Build and push container
-docker build -t gcr.io/your-project/portfolio:latest .
-docker push gcr.io/your-project/portfolio:latest
-
-# Deploy to Kubernetes
-kubectl apply -f k8s/
-kubectl rollout status deployment/portfolio-deployment
-
-# Verify deployment
-kubectl get pods -l app=portfolio
-curl https://your-domain.com/health
-```
-
-## 🎯 Skills Demonstrated
-
-### **Technical Skills**
-- ✅ Full-stack web development
-- ✅ Container orchestration with Kubernetes
-- ✅ Cloud-native application design
-- ✅ Infrastructure as Code with Terraform
-- ✅ CI/CD pipeline implementation
-- ✅ Monitoring and observability
-- ✅ Security best practices
-- ✅ Performance optimization
-
-### **DevOps & Cloud Skills**
-- ✅ Google Cloud Platform expertise
-- ✅ Docker containerization
-- ✅ Kubernetes cluster management
-- ✅ Automated deployment pipelines
-- ✅ Infrastructure automation
-- ✅ Monitoring and alerting setup
-- ✅ Multi-environment management
-- ✅ Incident response and troubleshooting
-
-## 🚧 Future Enhancements
-
-- [ ] **Multi-region deployment** for global availability
-- [ ] **Progressive Web App** features
-- [ ] **Advanced caching** with Redis
-- [ ] **Microservices architecture** migration
-- [ ] **Service mesh** implementation (Istio)
-- [ ] **GitOps** workflow with ArgoCD
-- [ ] **Machine Learning** integration for analytics
-- [ ] **Chaos engineering** for resilience testing
-
-## 📞 Contact & Links
-
-<!-- - **Portfolio Website:** [https://your-portfolio-url.com](https://your-portfolio-url.com) -->
-- **GitHub Repository:** [https://github.com/ShayanTofique/gcp-portfolio-deployment-project](https://github.com/ShayanTofique/gcp-portfolio-deployment-project)
-- **LinkedIn:** [https://www.linkedin.com/in/shayan-tofique-374457294/](https://www.linkedin.com/in/shayan-tofique-374457294/)
-- **Email:** shayantofique137@gmail.com
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Demo Highlights:**
+- Code commit triggering automated pipeline
+- Automated testing and security scanning
+- Docker image build and registry push
+- Kubernetes deployment with rolling updates
+- Health check validation
+- Rollback demonstration on failure
+- Real-time pipeline monitoring
 
 ---
 
-*This portfolio project demonstrates modern full-stack development, cloud engineering, and DevOps practices. It showcases the ability to design, develop, deploy, and maintain production-ready applications using industry best practices and cutting-edge technologies.*
+### **7. Prometheus & Grafana Monitoring**
+
+🎬 **[Complete Monitoring Stack Demo](https://www.youtube.com/watch?v=YOUR_MONITORING_VIDEO_ID)**
+> **Duration:** **Real-time application and infrastructure monitoring**
+
+**Monitoring Setup:**
+```bash
+# Deploy monitoring stack with Helm
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring
+
+# Create ServiceMonitor for app
+kubectl apply -f monitoring/portfolio-servicemonitor.yaml
+```
+
+**Demo Highlights:**
+- Prometheus metrics collection setup
+- Custom Node.js application metrics
+- 5-panel Grafana dashboard creation
+- Real-time traffic simulation
+- HTTP request rates, response times, error tracking
+
+
+
+## 📊 Monitoring Dashboard Features
+
+### **5 Core Monitoring Panels:**
+1. **HTTP Requests per Second** - Real-time traffic patterns
+2. **Response Time Percentiles** - 95th/50th percentile tracking
+3. **Total HTTP Requests** - Cumulative request counter
+4. **Current Request Rate** - Live traffic indicator
+5. **HTTP Status Codes** - Health and error monitoring
+
+### **Custom Metrics Integration:**
+- Application performance monitoring
+- Infrastructure resource utilization
+- Business metrics tracking
+- Proactive alerting on anomalies
+
+## 🎯 Skills Demonstrated
+
+### **Cloud & Infrastructure**
+✅ Multi-platform GCP deployments  
+✅ Kubernetes cluster management  
+✅ Infrastructure as Code (Terraform)  
+✅ Container orchestration  
+✅ Load balancing and auto-scaling  
+
+### **DevOps & Automation**
+✅ Complete CI/CD pipeline implementation  
+✅ Automated testing and deployment  
+✅ Infrastructure monitoring and alerting  
+✅ Performance testing and optimization  
+✅ Multi-environment management  
+
+### **Development & Architecture**
+✅ Full-stack application development  
+✅ RESTful API design  
+✅ Containerized application architecture  
+✅ Observability and metrics integration  
+✅ Security best practices  
+
+## 🔧 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/ShayanTofique/gcp-portfolio-deployment-project.git
+cd portfolio
+
+# Local development
+docker-compose up --build
+
+# Deploy to GCP (choose your deployment method)
+# Option 1: App Engine
+gcloud app deploy
+
+# Option 2: Compute Engine  
+./scripts/deploy-compute-engine.sh
+
+# Option 3: GKE
+./scripts/deploy-gke.sh
+```
+
+## 📞 Contact
+
+- **GitHub:** [https://github.com/ShayanTofique/gcp-portfolio-deployment-project](https://github.com/ShayanTofique/gcp-portfolio-deployment-project)
+- **LinkedIn:** [https://www.linkedin.com/in/shayan-tofique-374457294/](https://www.linkedin.com/in/shayan-tofique-374457294/)
+- **Email:** shayantofique137@gmail.com
+
+---
+
+*This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
