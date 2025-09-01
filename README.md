@@ -1,4 +1,4 @@
-[compute engine VM.webm](https://github.com/user-attachments/assets/dcc69d40-f6f9-4d78-88ee-7ceb0a611e0d)# 🚀 Portfolio Website - Full-Stack Cloud Application
+🚀 Portfolio Website - Full-Stack Cloud Application
 
 [![Deploy Status](https://img.shields.io/badge/Deploy-Success-brightgreen)](https://github.com/ShayanTofique/gcp-portfolio-deployment-project)
 [![Cloud Platform](https://img.shields.io/badge/Cloud-Google%20Cloud-blue)](https://cloud.google.com)
@@ -94,9 +94,7 @@ gcloud app browse
 
 🎬 [compute engine VM.webm](https://github.com/user-attachments/assets/a39d0d74-2876-4423-8e27-c9204bd82874)
 
-**Key Feature
-
-s:**
+**Key Features:**
 ```bash
 # Create VM with startup script
 gcloud compute instances create portfolio-vm \
@@ -281,5 +279,6 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
 
