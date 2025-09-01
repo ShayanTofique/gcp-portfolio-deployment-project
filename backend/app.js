@@ -83,7 +83,7 @@ app.use((req, res, next) => {
   currentVisitors.set(activeSessions.size);
   
   // Track new session if it's a page visit (not API call)
-  if (!page.startsWith('/api') && !path.includes('metrics')) {
+  if (!req.path.startsWith('/api') && !req.path.includes('metrics')) {
     visitorSessions.labels(page, deviceType).inc();
   }
   
