@@ -1,4 +1,4 @@
-# 🚀 Portfolio Website - Full-Stack Cloud Application
+[compute engine VM.webm](https://github.com/user-attachments/assets/dcc69d40-f6f9-4d78-88ee-7ceb0a611e0d)# 🚀 Portfolio Website - Full-Stack Cloud Application
 
 [![Deploy Status](https://img.shields.io/badge/Deploy-Success-brightgreen)](https://github.com/ShayanTofique/gcp-portfolio-deployment-project)
 [![Cloud Platform](https://img.shields.io/badge/Cloud-Google%20Cloud-blue)](https://cloud.google.com)
@@ -12,9 +12,7 @@ A modern, cloud-native portfolio website demonstrating multiple deployment strat
 
 This portfolio project demonstrates proficiency in modern cloud deployment strategies, from local development to production-grade Kubernetes clusters. It features comprehensive monitoring, CI/CD automation, and scalability testing across multiple GCP services.
 
-🎬 **portfolio website**
-
-(https://github.com/user-attachments/assets/3449eb7e-f53b-4959-9975-fc584056c822)
+🎬[portfolio website.webm](https://github.com/user-attachments/assets/405c245b-ef35-459a-9e14-59d7588d2ddd)
 
 ## 🛠️ Technology Stack
 
@@ -68,7 +66,7 @@ This portfolio project demonstrates proficiency in modern cloud deployment strat
 
 ### **1. Local Development with Docker Compose**
 
-🎬 **[Docker Compose Local Setup Demo](https://www.youtube.com/watch?v=YOUR_DOCKER_COMPOSE_VIDEO_ID)**
+🎬 [docker_compose.webm](https://github.com/user-attachments/assets/fd1932f2-05cc-4f2b-8f76-6ba28b2be7d5)
 
 **Setup:**
 ```bash
@@ -83,7 +81,7 @@ docker-compose up --build
 
 ### **2. Google App Engine Deployment**
 
-🎬 **[Serverless App Engine Demo](https://www.youtube.com/watch?v=YOUR_APP_ENGINE_VIDEO_ID)**
+🎬 [app_engine.webm](https://github.com/user-attachments/assets/257593dc-7fe0-4931-b83b-8a7e72f2bfc1)
 
 **Commands:**
 ```bash
@@ -94,9 +92,11 @@ gcloud app browse
 
 ### **3. Compute Engine Deployment**
 
-🎬 **[VM-Based Compute Engine Demo](https://www.youtube.com/watch?v=YOUR_COMPUTE_ENGINE_VIDEO_ID)**
+🎬 [compute engine VM.webm](https://github.com/user-attachments/assets/a39d0d74-2876-4423-8e27-c9204bd82874)
 
-**Key Features:**
+**Key Feature
+
+s:**
 ```bash
 # Create VM with startup script
 gcloud compute instances create portfolio-vm \
@@ -115,7 +115,7 @@ gcloud compute instances create portfolio-vm \
 
 ### **4. Google Kubernetes Engine (GKE) Deployment**
 
-🎬 **[Complete GKE Deployment Demo](https://www.youtube.com/watch?v=YOUR_GKE_VIDEO_ID)**
+🎬 
 
 **Cluster Setup:**
 ```bash
@@ -281,4 +281,5 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
