@@ -12,9 +12,9 @@ A modern, cloud-native portfolio website demonstrating multiple deployment strat
 
 This portfolio project demonstrates proficiency in modern cloud deployment strategies, from local development to production-grade Kubernetes clusters. It features comprehensive monitoring, CI/CD automation, and scalability testing across multiple GCP services.
 
-🎬 **[portfolio website]**
+🎬 **portfolio website**
 
-[portfolio website demo.webm](https://github.com/user-attachments/assets/3449eb7e-f53b-4959-9975-fc584056c822)
+(https://github.com/user-attachments/assets/3449eb7e-f53b-4959-9975-fc584056c822)
 
 ## 🛠️ Technology Stack
 
@@ -281,3 +281,4 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
