@@ -79,6 +79,8 @@ docker-compose up --build
 # Access at http://localhost:3000
 ```
 
+### **2. App Engine Deployment**
+
 🎬 **[Watch Demo](https://youtu.be/HIctYv1nZxo)** 
 
 **Commands:**
@@ -90,7 +92,7 @@ gcloud app browse
 
 ### **3. Compute Engine Deployment**
 
-🎬 [compute engine VM.webm](https://github.com/user-attachments/assets/a39d0d74-2876-4423-8e27-c9204bd82874)
+🎬 **[Watch Demo](https://youtu.be/p_84LbTUS24)** 
 
 **Key Features:**
 ```bash
@@ -111,7 +113,7 @@ gcloud compute instances create portfolio-vm \
 
 ### **4. Google Kubernetes Engine (GKE) Deployment**
 
-🎬 
+🎬 **[Watch Demo](https://youtu.be/bkJtOcmGMDU)** 
 
 **Cluster Setup:**
 ```bash
@@ -128,8 +130,7 @@ kubectl get pods -l app=portfolio
 
 ### **5. Kubernetes HPA & Load Testing**
 
-🎬 **[HPA Auto-scaling Under Load Demo](https://www.youtube.com/watch?v=YOUR_HPA_VIDEO_ID)**
-> **Duration:** 5 minutes | **Real-time scaling based on CPU/memory usage**
+🎬 **[Watch Demo](https://youtu.be/MuFytd1iz8Q)** 
 
 **Load Testing Setup:**
 ```bash
@@ -151,8 +152,7 @@ kubectl get pods -l app=portfolio --watch
 
 ### **6. Complete CI/CD Pipeline**
 
-🎬 **[End-to-End CI/CD Pipeline Demo](https://www.youtube.com/watch?v=YOUR_CICD_VIDEO_ID)**
-> **Duration:** 7 minutes | **Automated deployment from code commit to production**
+🎬 **[Watch Demo](https://youtu.be/MuFytd1iz8Q)** 
 
 **Pipeline Stages:**
 ```yaml
@@ -277,6 +277,7 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
 
 
