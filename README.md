@@ -66,7 +66,7 @@ This portfolio project demonstrates proficiency in modern cloud deployment strat
 
 ### **1. Local Development with Docker Compose**
 
-🎬 [docker_compose.webm](https://github.com/user-attachments/assets/fd1932f2-05cc-4f2b-8f76-6ba28b2be7d5)
+🎬 **[Watch Demo](https://youtu.be/C_qEkeIr_Zw)**
 
 **Setup:**
 ```bash
@@ -279,6 +279,7 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
 
 
