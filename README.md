@@ -152,7 +152,7 @@ kubectl get pods -l app=portfolio --watch
 
 ### **6. Complete CI/CD Pipeline**
 
-🎬 **[Watch Demo](https://youtu.be/MuFytd1iz8Q)** 
+🎬 **[Watch Demo](https://youtu.be/jgXdwoSfIb4)** 
 
 **Pipeline Stages:**
 ```yaml
@@ -277,6 +277,7 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
 
 
