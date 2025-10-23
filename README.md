@@ -186,8 +186,8 @@ jobs:
 
 ### **7. Prometheus & Grafana Monitoring**
 
-🎬 **[Complete Monitoring Stack Demo](https://www.youtube.com/watch?v=YOUR_MONITORING_VIDEO_ID)**
-> **Duration:** **Real-time application and infrastructure monitoring**
+🎬 **[Watch Demo](https://youtu.be/XAA3XHasx6I)**
+
 
 **Monitoring Setup:**
 ```bash
@@ -277,6 +277,7 @@ gcloud app deploy
 
 
 *This portfolio demonstrates modern cloud deployment strategies, DevOps automation, and production-ready monitoring across multiple Google Cloud Platform services.*
+
 
 
 
